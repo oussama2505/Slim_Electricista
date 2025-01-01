@@ -1,0 +1,179 @@
+/* nav-bar.component.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+  }
+  
+  /* Logo styles */
+  .navbar-logo {
+    width: 33.33%; /* 1/3 of the navbar */
+  }
+  
+  .logo {
+    max-height: 50px;
+    width: auto;
+  }
+  
+  /* Social icons section */
+  .navbar-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-icon {
+    font-size: 1.5rem;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #0088cc; /* WhatsApp color */
+  }
+  
+  .social-icon:last-child:hover {
+    color: #e1306c; /* Instagram color */
+  }
+  
+  .contact-text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Hamburger menu */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Hamburger to X animation */
+  .menu-toggle.open .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  
+  .menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.open .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  
+  /* Menu items */
+  .menu-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 1rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  
+  .menu-items.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .menu-items ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-items li {
+    margin: 1rem 0;
+  }
+  
+  .menu-items a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-items a:hover {
+    color: #0088cc;
+  }
+  
+  /* Responsive Design */
+  /* Mobile First approach - these are the base styles */
+  
+  /* Tablet styles */
+  @media screen and (min-width: 768px) {
+    .navbar-logo {
+      width: 25%; /* Slightly smaller on tablet */
+    }
+  
+    .logo {
+      max-height: 60px;
+    }
+  
+    .social-icon {
+      font-size: 1.8rem;
+    }
+  
+    .contact-text {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Desktop styles */
+  @media screen and (min-width: 1024px) {
+    .navbar {
+      padding: 1.5rem 2rem;
+    }
+  
+    .navbar-logo {
+      width: 20%; /* Even smaller on desktop */
+    }
+  
+    .logo {
+      max-height: 70px;
+    }
+  
+    .social-icon {
+      font-size: 2rem;
+    }
+  
+    .contact-text {
+      font-size: 1.1rem;
+    }
+  
+    .menu-toggle {
+      width: 35px;
+      height: 24px;
+    }
+  }

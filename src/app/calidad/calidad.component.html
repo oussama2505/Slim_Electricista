@@ -1,0 +1,15 @@
+<div class="timeline-container">
+    <h2 class="timeline-title">Calidad y Confianza</h2>
+    
+    <div class="timeline">
+      <div *ngFor="let item of timelineItems; let i = index" 
+           class="timeline-item" 
+           [class.timeline-item-right]="i % 2 === 0">
+        <div class="timeline-content">
+          <div class="timeline-icon">{{item.icon}}</div>
+          <h3>{{item.title}}</h3>
+          <div class="timeline-dot"></div>
+        </div>
+      </div>
+    </div>
+  </div>

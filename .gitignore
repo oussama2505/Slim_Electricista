@@ -37,6 +37,12 @@ yarn-error.log
 testem.log
 /typings
 
+# Angular
+.angular/
+
 # System files
 .DS_Store
 Thumbs.db
+
+# Environment
+.env
