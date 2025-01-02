@@ -1,0 +1,5 @@
+/* Asegura que el contenedor amarillo no afecte el diseño base */
+div[hover] {
+    transition: transform 0.3s ease;
+  }
+  

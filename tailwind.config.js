@@ -23,6 +23,9 @@ module.exports = {
           },
         },
       },
+      colors:{
+        'custom-gray':'#1a1a1a'
+      }
     },
   },
   plugins: [],

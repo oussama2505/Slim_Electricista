@@ -1,0 +1,12 @@
+<div class="services-container">
+    <h2 class="services-title">Todo Lo Que Necesitas</h2>
+    
+    <div class="services-grid">
+      <div class="service-card" *ngFor="let service of services">
+        <div class="service-icon">{{service.icon}}</div>
+        <h3 class="service-title">{{service.title}}</h3>
+        <p class="service-description">{{service.description}}</p>
+        <button class="service-button">{{service.buttonText}}</button>
+      </div>
+    </div>
+  </div>
